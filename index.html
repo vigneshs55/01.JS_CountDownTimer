@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="JS/script.js" ></script>
+    <title>PROJECT-1</title>
+</head>
+<body>
+    <p>Countdown to </p>
+    <h2 class="newyear">New Year</h2>
+    <div class="counter">
+
+        <div class="box">
+            <h2 id="days">00</h2>
+            <small>Days</small>
+        </div>
+
+        <div class="box">
+            <h2 id="hours">00</h2>
+            <small>Hours</small>
+        </div>
+
+        <div class="box">
+            <h2 id="minutes">00</h2>
+            <small>Minutes</small>
+        </div>
+
+        <div class="box">
+            <h2 id="seconds">00</h2>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+    
+     
+</body>
+</html>
+
+<!-- 
+  
+ * First we should design the webpage for mobile responsive and then we have to go for large devices.
+
+* new Date(); - to get current date.
+
+* new Date().getFullYear();  - to get current Year only.
+
+* const newYear = new Date(`01 january ${currentYear+1} 00:00:00`);  - Here the newyear date is specified , January is a BuiltIn date function in JS.
+
+//1735732797976 milli second
+
+// 1000ms = 1s
+// 60s = 1m
+// 60m = 1hr
+// 24hr = 1 day
+
+* here above the date function is maintain by milli seconds , so we got the value 1735732797976.
+* We can convert the millisecond to second , minutes , hour , day .
+
+* logic to convert ms to day : day = 1735732797976 / 1000/60/60/24;
+                        here above ,1000ms  , 60s  , 60m  , 24hr;
+
+
+* const d = Math.floor(difference/1000/60/60/24);  //logic for coverting ms to days.
+
+* const h = Math.floor((difference/1000/60/60)%24);  //logic for converting ms to hour.
+
+*const m =Math.floor((difference/1000/60)%60);    //logic for converting ms to minutes.
+
+*const s = Math.floor((difference/1000)%60);       //logic for converting ms to seconds.
+
+* countDown() is a function , all the logics are define in the function and finally call the function by using the function name ie., countDown();
+
+* setInterval function can call the particular function which is in the parameter is automatically call with the specific time.
+
+* setInterval(countDown,1000);  // Here the parameter function is countDown and the Duration Time is 1000.
+
+* 1000 means 1000 milliSeconds which refers 1 second. so the function will call automatically for Every seconds. 
+
+*  Now , We can go to Top of the JS code.  
+    const days = document.querySelector("#days");
+    const hours = document.querySelector("#hours");
+    const minutes = document.querySelector("#minutes");
+    const seconds = document.querySelector("#seconds");
+
+    Here, const days is a userdefined variables , document.querySelector() is a function for access the HTML content like id , class and so on.
+    
+    ("#days")
+    ("#hours")
+    ("#minutes")
+    ("#seconds")  are the HTML ID names we can specify in the braces , and store it into the variables ie., days , hours , minutes , seconds.
+
+* The very IMPORTANT MATTER is we must specify the lines ie.,
+                                            const days = document.querySelector("#days");
+                                            const hours = document.querySelector("#hours");
+                                            const minutes = document.querySelector("#minutes");
+                                            const seconds = document.querySelector("#seconds");  in the function countDown().
+                                            
+* suppose we can specify the above syntax in  outside of the function countDown() , it will not work.
+and the ERROR will ocur.
+
+* The ERROR is , Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')
+
+* So we must specify the querySelector inside the function countDown();
+
+
+ * Finally ,
+   days.innerHTML=d<10?"0"+d:d;
+   hours.innerHTML=h<10?"0"+h:h; 
+   minutes.innerHTML=m<10?"0"+m:m;
+   seconds.innerHTML=s<10?"0"+s:s;
+
+* Here above , The lines are performs to write the content in the HTML page.
+    days
+    hours
+    minutes
+    seconds   are the variables which is consist of the html ID which is in the previous process.
+
+* Here the SYNTAX is , variable.innerHTML = "content" ;
+                       days.innerHTML = d;      d is a variable which is consist of the days ,       so the days are print in the particular tag , here I use <h2> tag.
+                       hours.innerHTML = h;      h is a variable which is consist of the hours ,     so the hours are print in the particular tag , here I use <h2> tag.
+                       minutes.innerHTML = m;      m is a variable which is consist of the minutes , so the minutes are print in the particular tag , here I use <h2> tag.
+                       seconds.innerHTML = s;      s is a variable which is consist of the seconds , so the seconds are print in the particular tag , here I use <h2> tag.
+
+******************************************************************************************************************************************************************************************************
+
+-->
