@@ -13,7 +13,7 @@ body{
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../IMG/newyear.jpeg');
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://m.media-amazon.com/images/I/51sG+agaZbS._AC_UF1000,1000_QL80_.jpg');
     position:center;
     background-size:cover;
     color:#fff;
